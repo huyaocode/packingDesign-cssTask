@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+</head>
+<body>
+    多物体运动,每个物体绑定一个计时器, 透明度也要每个物体绑定
+    <br/>
+    只要是多物体运动, 东西都不能公用
+    <ul>
+        <li class="li_c_link"></li>
+        <li class="li_c_link"></li>
+        <li class="li_c_link"></li>
+    </ul>
+    <ul>
+        <li class="li_c_paralle"></li>
+        <li class="li_c_paralle"></li>
+        <li class="li_c_paralle"></li>
+    </ul>
+</body>
+<script src="../js/animation.js"></script>
+<script  type="text/javascript">
+    window.onload = function(){
+        var aLi = document.getElementsByClassName("li_c_link");
+        for(var i= 0;i < aLi.length; i++) {
+            aLi[i].timer = null;
+            console.log(124,aLi[i]);
+            aLi[i].onmouseover = function(){
+                var me = this;
+                animation(me, {width: 400}, function(){
+                   animation(me, {height: 200}, function(){
+                    animation(me, {opacity: 100});
+                   });
+                });
+            }
+            aLi[i].onmouseleave = function(){
+                var me = this;
+                animation(me, {opacity: 30}, function(){
+                    animation(me, {height: 100}, function(){
+                        animation(me, {width: 200});
+                    })
+                });
+            }
+        }
+        var aLi2 = document.getElementsByClassName("li_c_paralle");
+        for(var i= 0;i < aLi.length; i++) {
+            aLi2[i].timer = null;
+            console.log(124,aLi[i]);
+            aLi2[i].onmouseover = function(){
+                var me = this;
+                animation(me, {width: 400,height: 200,opacity: 100});
+            }
+            aLi2[i].onmouseleave = function(){
+                var me = this;
+                animation(me, {width: 200,height: 100,opacity: 30});
+            }
+        }
+    }
+
+    //运动完整版本代码
+    
+
+</script>
+<style>
+.li_c_link{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin: 30px;
+    border: 1px solid maroon;
+    opacity: 0.3;
+}
+.li_c_paralle{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin: 30px;
+    border: 1px solid maroon;
+    opacity: 0.3;
+}
+</style>
+</html>

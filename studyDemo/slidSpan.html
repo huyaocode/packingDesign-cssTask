@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <b>Matter special desktop worker</b>
+        <span></span>
+    </div>
+
+</body>
+<style>
+    .swiper {
+        width: 300px;
+        position: relative; /*设置相对位置, 否则span 和 b 会向上查找一个相对元素,一直到根元素*/
+        display: inline-block;
+        height: 2rem;
+        /* 必须设置高度 */
+        padding: .9rem 0 .9rem .9rem;
+    }
+    .swiper b {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .swiper span {
+        /* display: flex; */
+        position: absolute;  /* 相对与swiper */
+        left: 0;            /*让蓝色滑动条起始点在左边*/
+        top:0;
+
+        height: 100%;  
+        width: 0;
+
+        background-color: #00c0ff;
+        /* 宽度渐变 */
+        transition: width 0.5s;
+        -moz-transition: width 0.5s;
+        /* Firefox 4 */
+        -webkit-transition: width 0.5s;
+        /* Safari and Chrome */
+        -o-transition: width 0.5s;
+        /* Opera */
+    }
+    .swiper:hover span{
+        width: 100%;    /*当鼠标划入swiper区域,span宽度变宽 */
+    }
+</style>
+
+</html>

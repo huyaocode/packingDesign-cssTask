@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>大图滚动</title>
+    <style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#container {
+    width: 510px;
+    height: 286px;
+    margin: 0 auto;
+    position: relative;
+    background: pink;
+    overflow: hidden;
+}
+
+#inner {
+    width: 10000%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#inner img {
+    width: 1%;
+    height: 100%;
+    float: left;
+}
+.paganation {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+.paganation span {
+    padding: 5px 8px;
+    background: #F2F2F2;
+    color: red;
+    border-radius: 50%;
+    cursor: pointer
+}
+.paganation .selected {
+    background: #888;
+    color: white;
+}
+.arrow {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 286px;
+    line-height: 286px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+#right {
+    right: 0;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+    </style>
+</head>
+
+<body>
+    <!-- 视觉窗口 -->
+    <div id="container">
+        <!-- 包含所有图片的容器 -->
+        <div id="inner" class="clear">
+            <img style="background:red;" src="#1#" alt="">
+            <img style="background:orange;" src="#2#" alt="">
+            <img style="background:green;" src="#3#" alt="">
+            <img style="background:cyan;" src="#4#" alt="">
+            <img style="background:yellow;" src="#5#" alt="">
+            <img style="background:purple;" src="#6#" alt="">
+            <img style="background:pink;" src="#7#" alt="">
+            <img style="background:blue;" src="#8#" alt="">
+            <img style="background:red;" src="#1#" alt="">
+        </div>
+        <div class="paganation" id="paganation">
+            <!-- 锚点列表 -->
+            <span class="selected">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+        </div>
+        <div id="left" class="arrow">
+            <  <!-- 向左切换按钮 -->
+        </div>
+        <div id="right" class="arrow">
+            >  <!-- 向右切换按钮 -->
+        </div>
+    </div>
+        <script src="./Carousel.js"></script>
+        <script type="text/javascript">
+
+var container = document.getElementById("container");
+var inner = document.getElementById("inner");
+var spanList = document.getElementById("paganation").getElementsByTagName("span");
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var carousel = new Carousel(container, inner, spanList, left, right, 15, true);
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,911 @@
+body,
+div,
+figure,
+img,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a,
+b,
+i {
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 125%;
+  height: 100%;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Roboto, Arial, sans-serif;
+}
+body {
+  font-size: 0.7rem;
+  height: 100%;
+}
+.slidSpan {
+  cursor: pointer;
+  position: relative;
+}
+.slidSpan span {
+  z-index: 0;
+  position: absolute;
+  display: inline;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  background-color: #00c0ff;
+  transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: width 0.5s;
+  /* Safari and Chrome */
+  -o-transition: width 0.5s;
+  /* Opera */
+}
+.slidSpan h3,
+.slidSpan p,
+.slidSpan a,
+.slidSpan b {
+  transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  /* Firefox 4 */
+  -webkit-transition: color 0.3s;
+  /* Safari and Chrome */
+  -o-transition: color 0.3s;
+  /* Opera */
+}
+.slidSpan:hover {
+  color: #fff;
+}
+.slidSpan:hover span {
+  width: 100%;
+}
+.slidSpan:hover p {
+  color: #fff;
+}
+.showUp {
+  position: absolute;
+  z-index: 2;
+}
+#div_id_curtain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: none;
+}
+/* 导航栏 */
+.nav {
+  position: absolute;
+  top: 0;
+  left: -256px;
+  transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: left 0.5s;
+  /* Safari and Chrome */
+  -o-transition: left 0.5s;
+  /* Opera */
+  width: 256px;
+  height: 100%;
+  border-right: 1px solid #eee;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 10;
+}
+.nav #div_id_logo {
+  display: flex;
+  align-items: flex-start;
+}
+.nav #div_id_logo img[alt='logo'] {
+  margin-top: 30px;
+  width: 200px;
+}
+.nav .menu_class_menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  cursor: pointer;
+}
+.nav .menu_class_menu menuitem {
+  height: 2rem;
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  padding: .5rem 0 0 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.nav .menu_class_menu menuitem h3 {
+  color: #888;
+  font-weight: 100;
+  position: absolute;
+  z-index: 2;
+}
+.nav .menu_class_menu menuitem p {
+  top: 1.4rem;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #666;
+  position: absolute;
+  z-index: 2;
+}
+.nav .menu_class_menu menuitem span {
+  z-index: 0;
+  position: absolute;
+  display: inline;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  background-color: #00c0ff;
+  transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: width 0.5s;
+  /* Safari and Chrome */
+  -o-transition: width 0.5s;
+  /* Opera */
+}
+.nav .menu_class_menu menuitem h3,
+.nav .menu_class_menu menuitem p,
+.nav .menu_class_menu menuitem a,
+.nav .menu_class_menu menuitem b {
+  transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  /* Firefox 4 */
+  -webkit-transition: color 0.3s;
+  /* Safari and Chrome */
+  -o-transition: color 0.3s;
+  /* Opera */
+}
+.nav .menu_class_menu menuitem:hover {
+  color: #fff;
+}
+.nav .menu_class_menu menuitem:hover span {
+  width: 100%;
+}
+.nav .menu_class_menu menuitem:hover p {
+  color: #fff;
+}
+.nav .menu_class_menu menuitem span {
+  right: 0;
+}
+.nav .menu_class_menu menuitem:hover h3 {
+  color: #fff;
+}
+.nav .menu_class_menu menuitem:hover p {
+  color: #eee;
+}
+.nav .menu_class_menu menuitem:hover span {
+  width: 100%;
+}
+.nav .menu_class_menu menuitem.active span {
+  width: 1%;
+}
+.nav .menu_class_menu menuitem.active p {
+  color: #00c0ff;
+}
+.nav .menu_class_menu menuitem.active:hover span {
+  width: 100%;
+}
+.nav .menu_class_menu menuitem.active:hover p {
+  color: #eee;
+}
+.nav .div_id_foot {
+  height: 2.5rem;
+  padding-left: 1.2rem;
+}
+.nav .div_id_foot img {
+  display: inline-block;
+  width: 1.2rem;
+  margin: .2rem;
+}
+#div_id_toggleNav {
+  position: absolute;
+  left: 100%;
+  width: 1.6rem;
+  height: 1.5rem;
+  background-color: #333;
+  padding: .1rem 0 0 0;
+  z-index: 1201;
+  cursor: pointer;
+}
+#div_id_toggleNav hr {
+  display: block;
+  height: .1rem;
+  width: .6rem;
+  background: #fff;
+  margin: .25rem .25rem 0 .6rem;
+  border: none;
+  border-radius: 1px;
+}
+#div_id_toggleNav hr:nth-child(2) {
+  width: .8rem;
+  margin: .25rem .25rem 0 .4rem;
+}
+/*锚点*/
+#id_ul_Anchors {
+  z-index: 1201;
+  margin: 53vh 0;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 1rem;
+  position: flex;
+}
+#id_ul_Anchors li {
+  align-content: center;
+  height: 1.5rem;
+}
+#id_ul_Anchors li a {
+  color: #888;
+  font-weight: 600;
+  opacity: 0;
+  line-height: 0rem;
+}
+#id_ul_Anchors li a:hover {
+  opacity: 1;
+}
+#id_ul_Anchors li span {
+  display: inline-block;
+  float: right;
+  margin: .3rem 0 0 0;
+  border: 2px solid #666;
+  border-radius: 50%;
+}
+#id_ul_Anchors li.active span {
+  width: .5rem;
+  height: .5rem;
+  margin: 0.1rem -0.25rem 0 0.3rem;
+}
+/*主体部分*/
+/*标题区*/
+.div_class_titleBox {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.div_class_titleBox h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.div_class_titleBox h3 {
+  line-height: 1.2rem;
+  font-size: .8rem;
+  color: #888;
+  font-weight: 100;
+}
+.div_class_name h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.div_class_name h3 {
+  line-height: 1.2rem;
+  font-size: .8rem;
+  color: #888;
+  font-weight: 100;
+}
+/*左右切换的button*/
+.div_class_swiperButton {
+  display: flex;
+}
+.div_class_swiperButton div {
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+  position: relative;
+}
+.div_class_swiperButton div a {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  color: #888;
+}
+.div_class_swiperButton div span {
+  z-index: 0;
+  position: absolute;
+  display: inline;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  background-color: #00c0ff;
+  transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: width 0.5s;
+  /* Safari and Chrome */
+  -o-transition: width 0.5s;
+  /* Opera */
+}
+.div_class_swiperButton div h3,
+.div_class_swiperButton div p,
+.div_class_swiperButton div a,
+.div_class_swiperButton div b {
+  transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  /* Firefox 4 */
+  -webkit-transition: color 0.3s;
+  /* Safari and Chrome */
+  -o-transition: color 0.3s;
+  /* Opera */
+}
+.div_class_swiperButton div:hover {
+  color: #fff;
+}
+.div_class_swiperButton div:hover span {
+  width: 100%;
+}
+.div_class_swiperButton div:hover p {
+  color: #fff;
+}
+.div_class_swiperButton div:hover a {
+  color: #fff;
+}
+.div_class_swiperButton .div_class_buttonLeft span {
+  right: 0;
+}
+.div_class_swiperButton .div_class_buttonRight {
+  margin-left: 1px;
+}
+.div_class_swiperButton .div_class_buttonRight span {
+  left: 0;
+}
+.zoomimg:hover img {
+  transform: scale(1.1, 1.1);
+  transition: .3s transform;
+}
+.fullimg {
+  overflow: hidden;
+}
+.fullimg img {
+  width: 100%;
+  height: 100%;
+}
+/*首页--横向轮播页*/
+.homePagesize {
+  background-size: cover;
+}
+.fp-completely {
+  background-color: #eee;
+}
+#homePage1 {
+  background: no-repeat center url(../img/homePage1.jpg);
+  background-size: cover;
+}
+#homePage2 {
+  background: no-repeat center url(../img/homePage2.jpg);
+  background-size: cover;
+}
+#homePage3 {
+  background: no-repeat center url(../img/homePage3.jpg);
+  background-size: cover;
+}
+.fp-tableCell {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+#div_id_adv #paganation {
+  position: absolute;
+  bottom: 2rem;
+  left: 48%;
+  cursor: pointer;
+  width: 10rem;
+  height: 1rem;
+  display: block;
+}
+#div_id_adv #paganation span {
+  margin: .2rem;
+  color: #eee;
+}
+#div_id_adv .div_class_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#div_id_adv .div_class_container .div_class_cut {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+#div_id_adv .div_class_container .div_class_cut div {
+  height: 100%;
+  width: 33.33%;
+}
+/*关于页 + 产品页通用模板*/
+.div_class_swiperContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto auto;
+  overflow: hidden;
+  width: 80.1%;
+  background-size: cover;
+}
+.div_class_swiperContainer .div_class_ItemCut {
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 10000%;
+}
+.div_class_swiperContainer .div_class_ItemCut .swiper figure {
+  overflow: hidden;
+}
+.div_class_swiperContainer .div_class_ItemCut .swiper figure img {
+  width: 100%;
+  height: 100%;
+}
+.div_class_swiperContainer .div_class_ItemCut .swiper:hover img {
+  transform: scale(1.1, 1.1);
+  transition: .3s transform;
+}
+.div_class_swiperContainer .div_class_ItemCut .swiper img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+/*案例页*/
+#div_id_case {
+  background: no-repeat center url(../img/caseBack.jpg);
+  background-size: cover;
+}
+#div_id_case .div_class_swiperContainer {
+  margin: auto auto;
+  padding: 0;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper {
+  position: relative;
+  width: .4%;
+  background-color: #fff;
+  overflow: hidden;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption {
+  position: absolute;
+  background-color: #f8f8f8;
+  transition: background-color 0.7s;
+  -moz-transition: background-color 0.7s;
+  /* Firefox 4 */
+  -webkit-transition: background-color 0.7s;
+  /* Safari and Chrome */
+  -o-transition: background-color 0.7s;
+  /* Opera */
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.93);
+  bottom: -100%;
+  transition: bottom 1s;
+  -moz-transition: bottom 1s;
+  /* Firefox 4 */
+  -webkit-transition: bottom 1s;
+  /* Safari and Chrome */
+  -o-transition: bottom 1s;
+  /* Opera */
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption:hover {
+  background-color: #fff;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption b {
+  padding: .9rem .9rem .5rem;
+  font-size: .8rem;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption i {
+  color: #666;
+  font-weight: 100;
+  border-bottom: 1px solid #eee;
+  padding: 0 .9rem .8rem;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption p {
+  margin: .9rem;
+  line-height: 1.2rem;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure figcaption:hover {
+  background: rgba(255, 255, 255, 0.93);
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper figure img {
+  width: 100%;
+  height: 100%;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper:hover img {
+  transform: scale(1.1, 1.1);
+  transition: .3s transform;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper:hover figcaption {
+  position: absolute;
+  bottom: 0;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper {
+  width: .2%;
+  height: 100%;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div {
+  position: relative;
+  background-color: #f8f8f8;
+  transition: background-color 0.7s;
+  -moz-transition: background-color 0.7s;
+  /* Firefox 4 */
+  -webkit-transition: background-color 0.7s;
+  /* Safari and Chrome */
+  -o-transition: background-color 0.7s;
+  /* Opera */
+  display: flex;
+  flex-direction: column;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1, 1);
+  opacity: 1;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div img:hover {
+  transform: scale(1, 1);
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div div {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div div b {
+  z-index: 1000;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div:hover {
+  background-color: #fff;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div b {
+  padding: .9rem .9rem .5rem;
+  font-size: .8rem;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div i {
+  color: #666;
+  font-weight: 100;
+  border-bottom: 1px solid #eee;
+  padding: 0 .9rem .8rem;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper div p {
+  margin: .9rem;
+  line-height: 1.2rem;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.articleBox {
+  background-color: #f8f8f8;
+  transition: background-color 0.7s;
+  -moz-transition: background-color 0.7s;
+  /* Firefox 4 */
+  -webkit-transition: background-color 0.7s;
+  /* Safari and Chrome */
+  -o-transition: background-color 0.7s;
+  /* Opera */
+  display: flex;
+  flex-direction: column;
+}
+.articleBox:hover {
+  background-color: #fff;
+}
+.articleBox b {
+  padding: .9rem .9rem .5rem;
+  font-size: .8rem;
+}
+.articleBox i {
+  color: #666;
+  font-weight: 100;
+  border-bottom: 1px solid #eee;
+  padding: 0 .9rem .8rem;
+}
+.articleBox p {
+  margin: .9rem;
+  line-height: 1.2rem;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+/*产品页*/
+#div_id_product {
+  background: url(../img/productBack.png) no-repeat;
+  background-size: cover;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper {
+  margin-right: .018%;
+  width: .3233%;
+  background-color: #f8f8f8;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  /*加上后不会出现一条缝隙*/
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper:hover div {
+  color: #fff;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper:hover div span {
+  width: 100%;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper:hover div p {
+  color: #fff;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div {
+  height: 2rem;
+  padding: .9rem 0 .9rem .9rem;
+  cursor: pointer;
+  position: relative;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div b {
+  font-weight: 400;
+  font-size: .8rem;
+  position: absolute;
+  z-index: 2;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div p {
+  top: 2.2rem;
+  color: #888;
+  position: absolute;
+  z-index: 2;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div span {
+  left: 0;
+  height: 100%;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div span {
+  z-index: 0;
+  position: absolute;
+  display: inline;
+  height: 100%;
+  width: 0;
+  bottom: 0;
+  background-color: #00c0ff;
+  transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: width 0.5s;
+  /* Safari and Chrome */
+  -o-transition: width 0.5s;
+  /* Opera */
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div h3,
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div p,
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div a,
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div b {
+  transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  /* Firefox 4 */
+  -webkit-transition: color 0.3s;
+  /* Safari and Chrome */
+  -o-transition: color 0.3s;
+  /* Opera */
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div:hover {
+  color: #fff;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div:hover span {
+  width: 100%;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut .swiper div:hover p {
+  color: #fff;
+}
+#div_id_about {
+  background: no-repeat center url(../img/aboutBack.jpg);
+  background-size: cover;
+}
+#div_id_about .div_class_swiperContainer {
+  width: 75%;
+  overflow: hidden;
+}
+#div_id_about .div_class_swiperContainer .div_class_aboutTitle {
+  padding: 0.7rem 0 1.9rem 60%;
+}
+#div_id_about .div_class_swiperContainer .div_class_swiperButton {
+  position: absolute;
+  margin: 20rem 0 1.9rem 50%;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut {
+  width: 10000%;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper {
+  width: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper span.left {
+  width: 54%;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper span.left a {
+  float: right;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper span.left a img {
+  width: 100%;
+  height: 100%;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper .right {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4%;
+  width: 38%;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper .right a h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin: .7rem 0 1.4rem 0;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper .right a h3:hover {
+  color: #00c0ff;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper .right i {
+  display: block;
+  height: 1.4rem;
+  border-top: 1px solid #ddd;
+}
+#div_id_about .div_class_swiperContainer .div_class_ItemCut .aboutSwiper .right p {
+  color: #888;
+  line-height: 1.1rem;
+  max-height: 6.6rem;
+  overflow: hidden;
+}
+#div_id_contact {
+  background-image: url(../img/contactBack.png);
+  background-position: top center;
+  background-size: cover;
+  padding: 5%;
+}
+#div_id_contact .div_class_Container {
+  margin: auto auto;
+  width: 85%;
+}
+#div_id_contact .div_class_Container .div_class_titleBox .div_class_name h2 {
+  color: #eee;
+}
+#div_id_contact .div_class_Container .div_class_titleBox .div_class_name h3 {
+  color: #ddd;
+}
+#div_id_contact .div_class_Container .div_class_contactCut {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_titleBox {
+  padding: 0 0 1.9rem 0;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm {
+  width: 60%;
+  min-width: 400px;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form {
+  margin-top: 1.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #76838f;
+  width: 80%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_input {
+  display: inline-block;
+  display: flex;
+  border-bottom: 1px solid #d5d5d5;
+  width: 30%;
+  height: 2rem;
+  padding: .5rem 1%;
+  line-height: 2rem;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_input input {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  color: #76838f;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_textarea {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #d5d5d5;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_textarea textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  color: #76838f;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .submint {
+  width: 100%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .submint button {
+  width: 7rem;
+  height: 2rem;
+  margin: 1rem 0 1rem 0;
+  background-color: #00c0ff;
+  color: #fff;
+  font-weight: 500;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_information {
+  width: 35%;
+  color: #8a8a8a;
+  padding: 2.4rem 0 0 5%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_information p {
+  margin: 1rem;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#div_id_footer {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  padding: 1.25rem .75rem;
+}
+#div_id_footer .fp-tableCell {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+#div_id_footer .breadcrumb {
+  margin: 0;
+}
+#div_id_footer a {
+  color: #fff;
+}
+#div_id_footer .fp-tableCell {
+  margin: 0 auto;
+}
+#div_id_footer .center {
+  display: flex;
+  flex-direction: column;
+}
+#div_id_footer .center .met-links {
+  display: flex;
+  padding-bottom: .5rem;
+}
+#div_id_footer .center .met-links li {
+  display: inline;
+}
+#div_id_footer .center .met-links a::before {
+  content: "/";
+}
+#div_id_footer .center p {
+  padding-bottom: .5rem;
+}
+#div_id_footer .center .powered_by_metinfo {
+  text-align: center;
+}
+/*# sourceMappingURL=common.css.map */

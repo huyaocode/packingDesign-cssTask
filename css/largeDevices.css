@@ -1,0 +1,15 @@
+/*Small devices Tablets (>=1200px)*/
+.nav {
+    left: 0;
+    top: 0;
+}
+/* 网页主体 */
+#fullpage{
+    margin-left: 12.8rem;
+    display: block;
+    width: calc(100% - 12.8rem);
+    background-color: antiquewhite;
+}
+#div_id_toggleNav{
+    display: none;
+}

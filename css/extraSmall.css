@@ -1,0 +1,29 @@
+/*Phones (<768px)*/
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper{
+    width: 1%;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper{
+    width: .5%;
+}
+
+#div_id_product .div_class_swiperContainer .div_class_ItemCut{
+    width: 30000%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut{
+    width: 200%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm{
+    width: 50%;
+}
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_input{
+    width: 80%;
+}
+
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_messageForm form .ftype_textarea{
+    width: 73%;
+}
+
+#div_id_contact .div_class_Container .div_class_contactCut .div_class_information{
+    width: 30%;
+    /* background-color: red; */
+}

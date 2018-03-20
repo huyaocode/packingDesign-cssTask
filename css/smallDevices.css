@@ -1,0 +1,10 @@
+/* Small devices Tablets (≥768px) (<992px) */
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.maxSwiper{
+    width: .66666%;
+}
+#div_id_case .div_class_swiperContainer .div_class_ItemCut div.swiper{
+    width: .33333%;
+}
+#div_id_product .div_class_swiperContainer .div_class_ItemCut{
+    width: 15000%;
+}

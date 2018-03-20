@@ -1,0 +1,76 @@
+html,body,nav{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+div,p{
+    padding: 0;
+    margin: 0;
+}
+mainColor{
+    color: rgb(0, 192, 255);
+}
+#toggleNav {
+    position: absolute;
+    left: 200px;
+    background-color: #222;
+}
+/* 内容部分 */
+section{
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: -moz-calc(100% - 200px); 
+    width: -webkit-calc(100% - 200px); 
+    width: calc(100% - 200px);
+    float: left;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 页面右侧锚点 */
+.anchor {
+    height: 100%;
+    width: 40px;
+    position: fixed;
+    right: 0;
+}
+.points {
+    display: block;
+    width: 100%;
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    color: #888;
+}
+.points li {
+    height: 15px;
+    margin: 15px 0;
+    list-style-type: none;
+}
+.points span {
+   position: absolute;
+   display: block;
+   width: 310px;
+   height: 14px;
+   z-index: 5;
+   left: -25px;
+   line-height: 0px;
+   opacity: 0;
+}
+.points i {
+    position: absolute;
+    left: 15px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+.points span:hover {
+    opacity: 1;
+}
+.li_class_activeAnchor i{
+    width: 12px;
+    height: 12px;
+    left: 9px;
+    top: 23px;
+}

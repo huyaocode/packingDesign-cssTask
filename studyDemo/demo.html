@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jump</title>
+</head>
+<body>
+    <div>
+        <a href="#"><i><img src="../img/case1.jpg" alt=""></i><p>彩票</p></a>
+        <a href="#"><i><img src="../img/case2.jpg" alt=""></i><p>电梯</p></a>
+        <a href="#"><i><img src="../img/case3.jpg" alt=""></i><p>阿道夫</p></a>
+        <a href="#"><i><img src="../img/case4.jpg" alt=""></i><p>俺沙发</p></a>
+    </div>
+    
+</body>
+<script src="../js/animation.js"></script>
+<script>
+window.onload = function(){
+    var aList = document.getElementsByTagName('a');
+    for(var i =0; i < aList.length; i++) {
+        aList[i].onmousin = function(){
+            var _this = this.getElementsByTagName('i')[0];
+            animation(_this,{top: -15, opacity:0}, function (){
+                _this.style.top = 30 + 'px';
+                animation(_this,{top: 20, opacity:100}, null,2)
+            }, 20);
+        }
+    }
+}
+
+</script>
+<style>
+a{
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;    
+    padding: 10px; 
+}
+a img{
+    width: 48px;
+    height: 40px;
+}
+a i{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display:inline-block;
+    opacity: 1; 
+}
+a p {
+    position: absolute;
+    bottom: 0;
+}
+ </style>
+</html>

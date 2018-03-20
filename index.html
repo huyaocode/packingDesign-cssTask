@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link media="screen and (max-width:635px)" rel="stylesheet" href="css/extraSmall.css" />
+    <link media="screen and (min-width:1435px)" rel="stylesheet" href="css/largeDevices.css" />
+    <link media="screen and (min-width:992px) and (max-width:1434px)" rel="stylesheet" href="css/mediumDevices.css" />
+    <link media="screen and (min-width:634px) and (max-width:991px)" rel="stylesheet" href="css/smallDevices.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <title>包装设计网站</title>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div id="div_id_curtain"></div>
+    <nav class="nav" id="div_id_nav">
+        <div id="div_id_toggleNav">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <div id="div_id_logo">
+            <img src="img/music.gif" alt="musicPlay">
+            <img src="img/logo.gif" alt="logo">
+        </div>
+        <menu class="menu_class_menu">
+            <menuitem class="active">
+            <span></span>
+            <h3>欢迎</h3>
+            <p>HOME</p>
+            </menuitem>
+            <menuitem>
+            <span></span>
+            <h3>关于我们</h3>
+            <p>ABOUT US</p>
+            </menuitem>
+            <menuitem>
+            <span></span>
+            <h3>产品展示</h3>
+            <p>PRODUCT</p>
+            </menuitem>
+            <menuitem>
+            <span></span>
+            <h3>新闻</h3>
+            <p>NEWS</p>
+            </menuitem>
+            <menuitem>
+            <span></span>
+            <h3>案例</h3>
+            <p>CASES</p>
+            </menuitem>
+            <menuitem>
+            <span></span>
+            <h3>联系我们</h3>
+            <p>CONTACT</p>
+            </menuitem>
+        </menu>
+        <div class="div_id_foot">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2385249676&site=qq&menu=yes" target="_black">
+                <img border="0" src="./img/qq.png" alt="点击这里给我发消息" title="点击这里给我发消息" />
+            </a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=2385249676&site=qq&menu=yes" target="_black">
+                <img border="0" src="./img/weixin.png" alt="点击这里给我发消息" title="点击这里给我发消息" />
+            </a>
+        </div>
+    </nav>
+    <!-- 锚点 -->
+    <ul id="id_ul_Anchors">
+        <li data-menuanchor="div_id_advAnchor" class="active">
+            <a href="#div_id_advAnchor">广告</a>
+            <span></span>
+        </li>
+        <li data-menuanchor="div_id_caseAnchor">
+            <a href="#div_id_caseAnchor">案例</a>
+            <span></span>
+        </li>
+        <li data-menuanchor="div_id_productAnchor">
+            <a href="#div_id_productAnchor">产品</a>
+            <span></span>
+        </li>
+        <li data-menuanchor="div_id_aboutAnchor">
+            <a href="#div_id_aboutAnchor">关于</a>
+            <span></span>
+        </li>
+        <li data-menuanchor="div_id_contactAnchor">
+            <a href="#div_id_contactAnchor">联系</a>
+            <span></span>
+        </li>
+    </ul>
+    <div id="fullpage">
+        <!-- 欢迎页 -->
+        <div class="section" id="div_id_adv">
+            <div class="div_class_container">
+                <!-- 图片展示区 -->
+                <div class="div_class_cut">
+                    <div class="div_class_slide" id="homePage1"></div>
+                    <div class="div_class_slide" id="homePage2"></div>
+                    <div class="div_class_slide" id="homePage3"></div>
+                    <div class="div_class_slide" id="homePage1"></div>
+                </div>
+
+                <div id="paganation">
+                    <!-- 页面按钮区域 -->
+                    <span class="selected">◉</span>
+                    <span>◉</span>
+                    <span>◉</span>
+                </div>
+            </div>
+        </div>
+        <!-- 案例页 -->
+        <div class="section" id="div_id_case">
+            <div class="div_class_swiperContainer" id="caseSlider">
+                <div class="div_class_titleBox">
+                    <div class="div_class_name">
+                        <h2>案例</h2>
+                        <h3>CASE</h3>
+                    </div>
+                    <div class="div_class_swiperButton">
+                        <div class="div_class_buttonLeft" id="caseLeft">
+                            <span></span>
+                            <a>◀</a>
+                        </div>
+                        <div class="div_class_buttonRight" id="caseRight">
+                            <span></span>
+                            <a>▶</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div_class_ItemCut"  id="caseContainer">
+                    <div class="maxSwiper caseSwiper">
+                        <figure>
+                            <img src="img/case1.png" alt="案例">
+                            <figcaption>
+                                <b>设计案例</b>
+                                <i>产品、服务、理念、文化</i>
+                                <p>网页设计（web design，又称为Web UI design，WUI design，WUI），是根据企业希望向浏览者传递的信息（包括产品、服务、理念、文化），进行网站功能策划</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <figure>
+                            <img src="img/case2.jpg" alt="案例">
+                        </figure>
+                        <div>
+                            <img src="img/case2.jpg" alt="案例">
+                            <div>
+                                <b>多肉植物</b>
+                                <i>绿色美观、多肉植物</i>
+                                <p>绿色植物具有光合作用的能力——借助光能及叶绿素，利用水、无机盐和二氧化碳进行光合作用，释放氧气，产生葡萄糖等有机物，供植物体利用。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <div>
+                            <img src="img/case3.png" alt="案例">
+                            <div>
+                                <b>木质包装盒</b>
+                                <i>木质、包装设计盒</i>
+                                <p>随着现代工业的高速发展和人们生活水平的不断提高，人们对包装盒的需求量将会不断增加，而且对铁盒的质量也提出了更高的要求。</p>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="img/case3.png" alt="案例">
+                        </figure>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <figure>
+                            <img src="img/case4.png" alt="案例">
+                        </figure>
+                        <div>
+                            <img src="img/case4.png" alt="案例">
+                            <div>
+                                <b>玻璃瓶设计</b>
+                                <i>玻璃、透明设计</i>
+                                <p>玻璃瓶瓶适用于酱油、蚝油、醋、麻油、橄榄油等液体调味品的包装，大口瓶常用于腐乳、腌菜、酱料等固体类食品的包装。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <div>
+                            <img src="img/case5.png" alt="案例">
+                            <div>
+                                <b>多彩包装</b>
+                                <i>多姿多彩、胜芳</i>
+                                <p>Pentawards是全球首个也是唯一的专注于各种包装设计的竞赛，在产品包装设计界堪比“奥斯卡”大奖。</p>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="img/case5.png" alt="案例">
+                        </figure>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <figure>
+                            <img src="img/case6.jpg" alt="案例">
+                        </figure>
+                        <div>
+                            <img src="img/case6.jpg" alt="案例">
+                            <div>
+                                <b>产品盒子</b>
+                                <i>木盒、工艺</i>
+                                <p>盒子是可盛放物体,多为方型且有盖。盒子：可以装东西，可以拿起放下且移动的一种物体。一方面盒子用来盛放物品，另一方面盒子也为了方便物品的运输，增加产品的美观，给产品带来一些潜在价值。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper caseSwiper">
+                        <div>
+                                <img src="img/case7.jpg" alt="案例">
+                            <div>
+                                <b>包装设计</b>
+                                <i>皮包、卡牌、邀请</i>
+                                <p>设计 （design）这个词，是由日文里以汉字翻译"design"这个 字而成。日文在翻译"design"这个字的时候，除了"设计"...</p>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="img/case7.jpg" alt="案例">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 产品页 -->
+        <div class="section" id="div_id_product">
+            <div class="div_class_swiperContainer" id="productSlider">
+                <!-- 头部 -->
+                <div class="div_class_titleBox">
+                    <div class="div_class_name">
+                        <h2>产品</h2>
+                        <h3>PRODUCT</h3>
+                    </div>
+                    <div class="div_class_swiperButton">
+                        <div class="div_class_buttonLeft" id="productLeft">
+                            <span></span>
+                            <a>◀</a>
+                        </div>
+                        <div class="div_class_buttonRight" id="productRight">
+                            <span></span>
+                            <a>▶</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 产品列表 -->
+                <div class="div_class_ItemCut" id="productContainer">
+                    <a class="swiper productSwiper">
+                        <figure>
+                            <img src="./img/product1.jpg" alt="">
+                        </figure>
+                        <div >
+                            <b>Matter special desktop worker</b>
+                            <p>解决方案、单独适配&nbsp;</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a class="swiper productSwiper">
+                        <figure>
+                            <img src="./img/product2.jpg" alt="">
+                        </figure>
+                        <div>
+                            <b>Milkö é um projeto feito</b>
+                            <p>研究所、综合设计、不冗余&nbsp;</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a class="swiper productSwiper">
+                        <figure>
+                            <img src="./img/product3.jpg" alt="">
+                        </figure>
+                        <div>
+                            <b>Mountain Style Chicken Chicken</b>
+                            <p>多肉植物、绿化树&nbsp;</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a class="swiper productSwiper">
+                        <figure>
+                            <img src="./img/product4.jpg" alt="">
+                        </figure>
+                        <div>
+                            <b>Zero per stool</b>
+                            <p>响应式、跨平台&nbsp;</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a class="swiper productSwiper">
+                        <figure>
+                            <img src="./img/product5.jpg" alt="">
+                        </figure>
+                        <div>
+                            <b>Green House</b>
+                            <p>响应式、跨平台&nbsp;</p>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="div_id_about">
+            <div class="div_class_swiperContainer" id="aboutSlider">
+                <div class="div_class_aboutTitle">
+                    <div class="div_class_name">
+                        <h2>关于</h2>
+                        <h3>ABOUT US</h3>
+                    </div>
+                </div>
+                <div class="div_class_swiperButton">
+                    <div class="div_class_buttonLeft" id="aboutLeft">
+                        <span></span>
+                        <a>◀</a>
+                    </div>
+                    <div class="div_class_buttonRight" id="aboutRight">
+                        <span></span>
+                        <a>▶</a>
+                    </div>
+                </div>
+                <div class="div_class_ItemCut" id="aboutContainer">
+                    <div class="aboutSwiper">
+                        <span class="left">
+                            <a href="7##" title="公司简介">
+                                <img src="./img/about1.png" style="opacity: 1;">
+                            </a>
+                        </span>
+                        <span class="right">
+                            <a href="##7" title="公司简介">
+                                <h3>公司简介</h3>
+                            </a>
+                            <i>&nbsp;</i>
+                            <p>以人为本，追求卓越以人为本，首先体现在视觉对待客户朋友的态度。视觉自始至终把客户当成有缘相识、相知的朋友，因此视觉关注客户的每一处要求...</p>
+                        </span>
+                    </div>
+
+                    <div class="aboutSwiper">
+                        <span class="left">
+                            <a href="##8" title="发展历程">
+                                <img src="./img/about2.jpg" style="opacity: 1;">
+                            </a>
+                        </span>
+                        <span class="right">
+                            <a href="##8" title="发展历程">
+                                <h3>发展历程</h3>
+                            </a>
+                            <i>&nbsp;</i>
+                            <p>WEB企业版不仅支持PC桌面端，更完美支持手机触屏版。WEB产品为什么没有采用响应式设计，下面简单总结几个主要原因...</p>
+                        </span>
+                    </div>
+
+                    <div class="aboutSwiper">
+                        <span class="left">
+                            <a href="##9" title="技术团队">
+                                <img src="./img/about3.jpg" style="opacity: 1;">
+                            </a>
+                        </span>
+                        <span class="right">
+                            <a href="##9" title="技术团队">
+                                <h3>技术团队</h3>
+                            </a>
+                            <i>&nbsp;</i>
+                            <p>因为无纸作画出来的效果不好，线不好看。日本动画现在还是广泛在用铅笔，连自动铅笔都不用，所以要不停的削（原画的桌子上一般都配有全自动的电动削笔器）。</p>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="section" id="div_id_contact">
+            <div class="div_class_Container">
+                <!-- 头部 -->
+                <div class="div_class_titleBox">
+                    <div class="div_class_name">
+                        <h2>联系</h2>
+                        <h3>CONTACT</h3>
+                    </div>
+                </div>
+                <div class="div_class_contactCut" >
+                    <div class="div_class_messageForm">
+                        <form >
+                            <div class="form-group ftype_input">
+                                    <input type="text" placeholder="姓名 " >
+                            </div>
+
+                            <div class="form-group ftype_input">
+                                    <input type="text" placeholder="电话 ">
+                            </div>
+
+                            <div class="form-group ftype_input">
+                                    <input type="text" placeholder="Email ">
+                            </div>
+
+                            <div class="form-group ftype_textarea">
+                                    <textarea  placeholder="留言内容 " rows="5"></textarea>
+                            </div>
+                            <div class="submint">
+                                <button>
+                                    <span>提交信息</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="div_class_information">
+                        <p>
+                            地址：西南科技大学东9实验楼</p>
+                        <p>
+                            手机：12345678901 / 12345678901</p>
+                        <p>
+                            邮箱：2385249676@qq.com</p>
+                        <p>
+                            电话：+86-6089-8654321</p>
+                        <p>
+                            邮编：621010</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section fp-auto-height" id="div_id_footer">
+            <div class="center">
+                <div class="met-links">
+                    <ol class="breadcrumb">
+                        <li>友情链接 :</li>
+                        <li>
+                            <a href="###" title="">
+                                品牌设计
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###" title="">
+                                产品设计
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###" title="">
+                                LOGO设计
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+                <p>产品设计 版权所有 2008-2016 粤ICP备0123456789-1 </p>
+                <div class="powered_by_metinfo">
+                    Powered&nbsp;by&nbsp;胡耀
+                    <a href="http://www.MetInfo.cn/#copyright" title="企业网站管理系统">图片与UI设计来自MetInfo
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="./js/examples.js"></script>
+<script src="./js/Carousel.js"></script>
+<script src="./js/slider.js"></script>
+<script src="js/index.js"></script>
+</html>
